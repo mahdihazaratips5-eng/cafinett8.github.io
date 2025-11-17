@@ -3,40 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سایت من</title>
+    <title>بیمه خودرو - بیمه موتور</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
         body {
-            font-family: Tahoma, Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 50px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
             line-height: 1.6;
         }
-        h1 {
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
+        .nav {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .nav a:hover {
+            color: #2a5298;
+        }
+        
+        .hero {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero h1 {
+            color: #2a5298;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        p {
+        
+        .hero p {
+            color: #666;
             font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            background: #2a5298;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #1e3c72;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .service-card h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 1.5em;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info {
+            color: #666;
             margin: 15px 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🎉 موفقیت آمیز بود!</h1>
-        <p>اولین سایت شما با GitHub Pages ساخته شد</p>
-        <p>این سایت کاملاً رایگان و همیشه آنلاین خواهد بود</p>
-        <p>آدرس سایت شما: cafinett8.github.io</p>
+        <header>
+            <div class="logo">بیمه خودرو</div>
+            <nav class="nav">
+                <a href="#home">خانه</a>
+                <a href="#services">خدمات</a>
+                <a href="#about">درباره ما</a>
+                <a href="#contact">تماس</a>
+            </nav>
+        </header>
+
+        <section class="hero" id="home">
+            <h1>بیمه خودرو و موتور سیکلت</h1>
+            <p>با بهترین پوشش‌های بیمه‌ای و مناسب‌ترین قیمت‌ها</p>
+            <a href="#services" class="btn">مشاهده خدمات</a>
+        </section>
+
+        <section class="services" id="services">
+            <div class="service-card">
+                <h3>بیمه شخص ثالث</h3>
+                <p>پوشش کامل خسارت به اشخاص ثالث</p>
+                <div class="price">شروع از ۱,۲۰۰,۰۰۰ تومان</div>
+                <button class="btn">خرید آنلاین</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>بیمه بدنه</h3>
+                <p>پوشش کامل خسارات بدنه خودرو</p>
+                <div class="price">شروع از ۲,۵۰۰,۰۰۰ تومان</div>
+                <button class="btn">خرید آنلاین</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>بیمه موتور سیکلت</h3>
+                <p>پوشش کامل برای موتورسیکلت</p>
+                <div class="price">شروع از ۴۰۰,۰۰۰ تومان</div>
+                <button class="btn">خرید آنلاین</button>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <h3>تماس با ما</h3>
+            <div class="contact-info">تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</div>
+            <div class="contact-info">ایمیل: info@bimekhodro.com</div>
+            <div class="contact-info">آدرس: تهران، خیابان ولیعصر</div>
+            <p style="margin-top: 20px; color: #888;">© ۲۰۲۴ - تمام حقوق محفوظ است</p>
+        </footer>
     </div>
 </body>
 </html>
